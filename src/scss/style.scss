@@ -5,10 +5,14 @@
 }
 
 .container{
-    max-width: 1140px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
 
-@import './blocks/header'
+@import './blocks/header';
+@import './blocks/product';
+
+
+@import './blocks/buttons';

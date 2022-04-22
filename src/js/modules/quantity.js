@@ -4,15 +4,14 @@ export const quantity = (itemBlock,qunatityNumber,plusBtn,minusBtn) => {
     counterQuantity.forEach((item) => {
         item.addEventListener('click', (e) => {
             let target = e.target
+            let count = Number(item.querySelector(qunatityNumber).textContent)
             if(target.classList.contains(minusBtn)){
-                let count = Number(item.querySelector(qunatityNumber).textContent)
                 if (count > 1){
                     count-=1
                     item.querySelector(qunatityNumber).textContent = count
                 }
             }
             if(target.classList.contains(plusBtn)){
-                let count = Number(item.querySelector(qunatityNumber).textContent)
                 count+=1
                 item.querySelector(qunatityNumber).textContent = count
             }

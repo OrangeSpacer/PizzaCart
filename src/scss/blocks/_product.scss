@@ -60,6 +60,9 @@
         &_item{
             display: flex;
             padding: 15px 0 15px 0;
+            &-right{
+                position: relative;
+            }
         }
         &_price{
             color: #FD5C2E;
@@ -80,5 +83,27 @@
         padding: 2px;
         width: 200px;
         padding-left: 10px;
+    }
+    &__trashcan{
+        position: absolute;
+        right: 0;
+        top: 5px;
+        cursor: pointer;
+        &::before{
+            display: block;
+            content: '';
+            width: 20px;
+            height: 2px;
+            transform: rotate(45deg) translateX(2px);
+            background-color: black;
+        }
+        &::after{
+            display: block;
+            content: '';
+            width: 20px;
+            height: 2px;
+            transform: rotate(-45deg) translateX(1px);
+            background-color: black;
+        }
     }
 }

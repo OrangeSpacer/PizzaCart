@@ -89,6 +89,7 @@
         right: 0;
         top: 5px;
         cursor: pointer;
+        transition: all 0.5s ease;
         &::before{
             display: block;
             content: '';
@@ -104,6 +105,14 @@
             height: 2px;
             transform: rotate(-45deg) translateX(1px);
             background-color: black;
+        }
+        &:hover{
+            transform: scale(1.1);
+            transition: all 0.5s ease;
+        }
+        &:active{
+            transform: scale(0.8);
+            transition: all 0.3s ease;
         }
     }
 }

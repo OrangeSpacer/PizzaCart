@@ -6,7 +6,7 @@ export const  trashcan = (trashButton) => {
 
         if(target.classList.contains(trashButton)){
             let parentNumber = (target.closest('.product__cart_item').dataset.id)
-            let parent = cartBlock.querySelector(`.product__cart_item[data-id="${parentNumber}"]`)
+            let parent = cartBlock.querySelector(`[data-id="${parentNumber}"]`)
             parent.remove()
         }
     })

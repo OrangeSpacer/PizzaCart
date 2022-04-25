@@ -20,7 +20,7 @@ export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,
                 
                 const itemId = cartBlock.querySelector(`[data-id="${cardItem.id}"]`)
 
-                document.querySelector('.product__quantity_number').textContent = 1
+                card.querySelector('.product__quantity_number').textContent = 1
                 
                 if(itemId){
                     let newQuantity = (Number(itemId.querySelector('.product__quantity_number').textContent)+Number(cardItem.quantity))

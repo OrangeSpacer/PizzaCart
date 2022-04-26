@@ -66,4 +66,33 @@
         border-radius: 10px;
         transition: all 0.5s ease;
     }
+    &__modal-close{
+        position: absolute;
+        background: transparent;
+        border: none;
+        top: 9px;
+        right: 9px;
+        &::after{
+            display: block;
+            position: absolute;
+            right: -6px;
+            top: 7px;
+            content: "";
+            width: 15px;
+            height: 2px;
+            transform: rotate(45deg);
+            background-color: #000;
+        }
+        &::before{
+            display: block;
+            position: absolute;
+            right: 1px;
+            top: 0px;
+            content: "";
+            width: 2px;
+            height: 16px;
+            transform: rotate(45deg);
+            background-color: #000;
+        }
+    }
 }

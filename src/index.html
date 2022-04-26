@@ -134,10 +134,10 @@
                             <h2>
                                 Your order
                             </h2>
-                            <form action="#">
-                                <div class="product__cart_items"></div>
-                                <input type="number" placeholder="enter your phone number" class="product__input">
-                                <button class="btn btn__submit">
+                            <form action="https://jsonplaceholder.typicode.com/posts" class="form" method="post">
+                                <div type="items" class="product__cart_items"></div>
+                                <input type="number" placeholder="enter your phone number" required class="product__input">
+                                <button class="btn btn__submit" type="submit">
                                     Order
                                 </button>
                             </form>
@@ -149,6 +149,18 @@
                 </div>
             </div>
         </section>
+        <div class="modal modal__hidden">
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                    <img src="img/modal/pizza.png" alt="pizza" class="modal__img_top">
+                    <h2>
+                        Thanks for the order
+                    </h2>
+                    <button class="btn btn__modal-close"></button>
+                    <img src="img/modal/pizza.png" alt="pizza" class="modal__img_bottom">
+                </div>
+            </div>
+        </div>
     </main>
     <script src="js/main.min.js"></script>
 </body>

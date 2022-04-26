@@ -1,0 +1,42 @@
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+    &__img{
+        &_top{
+            padding-bottom: 4px;
+        }
+        &_bottom{
+            padding-top: 4px;
+            margin-left: 80%;
+        }
+    }
+    &__wrapper{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+    }
+    &__content{
+        position: absolute;
+        background-color: #fff;
+        z-index: 1000;
+        padding: 30px;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%);
+        border-radius: 15px;
+        cursor: default;
+    }
+    &__active{
+        display: block;
+    }
+    &__hidden{
+        display: none;
+    }
+}

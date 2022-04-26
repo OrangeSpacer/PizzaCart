@@ -4,7 +4,6 @@ export const amount = () => {
     let newAmountItem = document.querySelector('span')
     let totalPrice = 0
 
-    console.log(cartItem)
     cartItem.forEach((item) => {
         let qunatity = parseInt(item.querySelector('.product__quantity_number').textContent)
         let price = item.querySelector('.product__cart_price')

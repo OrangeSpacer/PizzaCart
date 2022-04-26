@@ -1,4 +1,5 @@
 import { amount } from "./amountItems.js"
+import { formSubmit } from "./formsubmit.js"
 
 export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,descrItem,imgItem,quantityItem) => {
     const cartBlock = document.querySelector(cartItemBlock)
@@ -26,6 +27,7 @@ export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,
                     let newQuantity = (Number(itemId.querySelector('.product__quantity_number').textContent)+Number(cardItem.quantity))
                     itemId.querySelector('.product__quantity_number').textContent = newQuantity
                     amount()
+                    formSubmit()
                 }
                 
                 else{
@@ -58,6 +60,7 @@ export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,
                 `
                 cartBlock.insertAdjacentHTML('beforeend',cartItem)
                 amount()
+                formSubmit()
                 }
             })
         })

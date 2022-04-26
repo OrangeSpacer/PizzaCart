@@ -1,3 +1,5 @@
+import { amount } from "./amountItems.js"
+
 export const  trashcan = (trashButton) => {
     const cartBlock = document.querySelector('.product__cart_items')
 
@@ -8,6 +10,7 @@ export const  trashcan = (trashButton) => {
             let parentNumber = (target.closest('.product__cart_item').dataset.id)
             let parent = cartBlock.querySelector(`[data-id="${parentNumber}"]`)
             parent.remove()
+            amount()
         }
     })
     

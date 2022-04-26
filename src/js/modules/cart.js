@@ -1,3 +1,5 @@
+import { amount } from "./amountItems.js"
+
 export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,descrItem,imgItem,quantityItem) => {
     const cartBlock = document.querySelector(cartItemBlock)
     const btnadd = document.querySelectorAll(buttonAddItem)
@@ -8,7 +10,6 @@ export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,
         btnadd.forEach((item) => {
             item.addEventListener('click', () => {
                 let card = item.closest(parentItem)
-                
                 cardItem = {
                     'title': card.querySelector(titleItem).textContent,
                     'price': card.querySelector(priceItem).textContent,
@@ -17,7 +18,6 @@ export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,
                     'quantity': card.querySelector(quantityItem).textContent,
                     'id':card.dataset.id,
                 }
-                
                 const itemId = cartBlock.querySelector(`[data-id="${cardItem.id}"]`)
 
                 card.querySelector('.product__quantity_number').textContent = 1
@@ -25,6 +25,7 @@ export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,
                 if(itemId){
                     let newQuantity = (Number(itemId.querySelector('.product__quantity_number').textContent)+Number(cardItem.quantity))
                     itemId.querySelector('.product__quantity_number').textContent = newQuantity
+                    amount()
                 }
                 
                 else{
@@ -56,6 +57,7 @@ export const cart = (cartItemBlock,parentItem,buttonAddItem,titleItem,priceItem,
                 </div>
                 `
                 cartBlock.insertAdjacentHTML('beforeend',cartItem)
+                amount()
                 }
             })
         })

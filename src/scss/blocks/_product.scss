@@ -77,6 +77,13 @@
             padding: 5px 0 5px 0;
             display: flex;
         }
+        &_amount{
+            padding-top: 10px;
+            font-size: 20px;
+            span{
+                color: #FD5C2E;
+            }
+        }
     }
     &__input{
         margin-top: 20px;

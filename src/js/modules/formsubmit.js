@@ -7,7 +7,7 @@ export const formSubmit = () => {
     const amountZero = document.querySelector('span')
 
     submitBtn.addEventListener('click', () => {
-        if (formPhone.value.length == 10){
+        if (formPhone.value.length == 11){
             formPhone.value = ''
             cartItems.textContent = ''
             console.log(cartItems)
